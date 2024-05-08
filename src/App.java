@@ -17,11 +17,11 @@ public class App {
         populacaoUsuarios.add(new Cliente("Cliente", "Rua 1", "Email@gmail.com", "(12)30891-2308", new ArrayList<Livro>(), "736.823.283.10", false));
         populacaoUsuarios.add(new Admin("Admin", "Rua 2", "Email@hotmail.com", "(41)99999-9999", "123.456.798-10", true));
 
-        populacaoLivros.add(new Livro("Neuromancer", "William Gibson", "Ficção Científica", 1984, 2));
-        populacaoLivros.add(new Livro("O Mito de Sísifo", "Albert Camus", "Filosofia", 1942, 1));
+        populacaoLivros.add(new Livro("Neuromancer", "William Gibson", "Ficção Cientifica", 1984, 2));
+        populacaoLivros.add(new Livro("O Mito de Sisifo", "Albert Camus", "Filosofia", 1942, 1));
         populacaoLivros.add(new Livro("O Estrangeiro", "Albert Camus", "Filosofia", 1942, 2));
 
-        controller.buscarLivro("o mito de sísifo", populacaoLivros).setCodigo(1);
+        controller.buscarLivro("o mito de sisifo", populacaoLivros).setCodigo(1);
         controller.buscarLivro("o estrangeiro", populacaoLivros).setCodigo(2);
         controller.buscarLivro("neuromancer", populacaoLivros).setCodigo(3);
 

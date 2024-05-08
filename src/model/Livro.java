@@ -13,8 +13,17 @@ public class Livro implements Comparable<Livro>{
         this.qtde = qtde;
     }
 
+    public Livro(String titulo, String autor, String categoria, int anoPub, int qtde, int codigo) {
+        this.titulo = Util.formataString(titulo);
+        this.autor = Util.formataString(autor);
+        this.categoria = Util.formataString(categoria);
+        this.anoPub = anoPub;
+        this.qtde = qtde;
+        this.codigo = codigo;
+    }
+
     public String livroDesc() {
-        return titulo + " de " + autor + " quantidade: " + qtde;
+        return titulo + ", de " + autor + ". Quantidade disponível: " + qtde;
     }
 
     public String info() {

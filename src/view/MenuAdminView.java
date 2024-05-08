@@ -42,7 +42,7 @@ public class MenuAdminView {
         
                 case 2:
                     System.out.println("Cadastro de novo usuário: \n");
-                    System.out.println("Tipo de usuário: 1 - Admin \n 2 - Cliente");
+                    System.out.println("Tipo de usuário:\n1 - Admin\n2 - Cliente");
                     admin = in.nextInt();
                     in.nextLine(); // consumir o caractere de quebra de linha
 

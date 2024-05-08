@@ -93,7 +93,7 @@ public class BibliotecaController {
     public List<Livro> emprestarLivro(List<Livro> livros){
         return livros.stream()
             .filter(l -> l.reduzirEstoque())
-            .map(l -> new Livro(l.getTitulo(), l.getAutor(), l.getCategoria(), l.getAnoPub(), 1 ))
+            .map(l -> new Livro(l.getTitulo(), l.getAutor(), l.getCategoria(), l.getAnoPub(), 1, l.getCodigo()))
             .collect(Collectors.toList());
     }
 
@@ -101,11 +101,10 @@ public class BibliotecaController {
         livros
         .forEach(livro -> this.livros
         .forEach( l -> {
-            if (String.valueOf(l.getCodigo()).equals(String.valueOf(livro.getCodigo()))) {
+            if (l.getCodigo() == livro.getCodigo()) {
                 l.aumentarEstoque();
             }
         }));
-        livros.clear();
     }
 
     public String relatorio(){

@@ -16,7 +16,7 @@ public class MenuSelecionaUsuario {
 
         try {
             while (selecionaUsuario) {
-                System.out.println("Selecione um usuário: \n");
+                System.out.println("\nSelecione um usuário: \n");
                 for (Usuario u : controller.getUsuarios()) {
                     System.out.println("Usuario: " + u.getNome());
                 }
@@ -32,10 +32,10 @@ public class MenuSelecionaUsuario {
                         }
                           
                     }
-                    System.out.println("Usuário não encotrado, tente novamente."); 
+                    System.out.println("\nUsuário não encotrado, tente novamente."); 
             }  
         }   catch (InputMismatchException e) {
-                System.out.println("Erro de entrada. Tente novamente.");
+                System.out.println("\nErro de entrada. Tente novamente.");
                 in.next(); // clear the invalid input
             }
     }
