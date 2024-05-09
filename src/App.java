@@ -6,7 +6,7 @@ import model.*;
 import view.MenuSelecionaUsuario;
 
 public class App {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         Scanner in = new Scanner(System.in);
         
         BibliotecaController controller = new BibliotecaController(new ArrayList<Livro>(), new ArrayList<Usuario>());
@@ -21,12 +21,12 @@ public class App {
         populacaoLivros.add(new Livro("O Mito de Sisifo", "Albert Camus", "Filosofia", 1942, 1));
         populacaoLivros.add(new Livro("O Estrangeiro", "Albert Camus", "Filosofia", 1942, 2));
 
-        controller.buscarLivro("o mito de sisifo", populacaoLivros).setCodigo(1);
-        controller.buscarLivro("o estrangeiro", populacaoLivros).setCodigo(2);
-        controller.buscarLivro("neuromancer", populacaoLivros).setCodigo(3);
-
         controller.getLivros().addAll(populacaoLivros);
         controller.getUsuarios().addAll(populacaoUsuarios);
+
+        controller.buscarLivro("o mito de sisifo").setCodigo(1);
+        controller.buscarLivro("o estrangeiro").setCodigo(2);
+        controller.buscarLivro("neuromancer").setCodigo(3);
 
         System.out.println("Bem vindo a Biblioteca de AlexAndré");
     
